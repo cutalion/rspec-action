@@ -20,23 +20,6 @@ describe RSpec::Core::Hooks do
     specify { str.should == "123" }
   end
 
-  describe "simple example" do
-    before { str << "1" }
-    action { str << "3" }
-    before { str << "2" }
-
-    specify { str.should == "123" }
-    specify { str.should == "123" }
-  end
-
-  describe "simple example" do
-    before { str << "1" }
-    action { str << "3" }
-    before { str << "2" }
-
-    specify { str.should == "123" }
-    specify { str.should == "123" }
-  end
   describe "two-level example" do
     action { str << "3" }
     context "level one" do
