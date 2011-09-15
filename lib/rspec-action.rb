@@ -1,5 +1,4 @@
 require "rspec-action/version"
-require "rspec/core/hooks"
 
 module RSpec
   module Core
