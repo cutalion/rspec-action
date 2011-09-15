@@ -39,4 +39,8 @@ instead of
 
 # Requirements
 
-[rspec2](https://github.com/rspec/rspec)
+* [rspec2](https://github.com/rspec/rspec) ~> 2.0
+
+# Installation
+
+  gem install rspec-action
