@@ -4,10 +4,10 @@ An extension to rspec, which provides an `action` command to rspec examples
 
 # Description
 
-rspec-action is an extension to rspec2, which allows you to specify a last before hook.
+rspec-action is an extension to rspec2, which allows you to specify the last before hook.
 I named it `action`, because it's quite helpful for me in the controller specs.
 
-I like to write
+I prefer to write
 
     describe "GET index" do
       action { get :index }
