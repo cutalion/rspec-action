@@ -9,33 +9,33 @@ I named it `action`, because it's quite helpful for me in the controller specs.
 
 I like to write
 
-  describe "GET index" do
-    action { get :index }
+    describe "GET index" do
+      action { get :index }
 
-    context 'if user signed in' do
-      before { sign_in user }
-      it { should respond_with :success }
-    end
+      context 'if user signed in' do
+        before { sign_in user }
+        it { should respond_with :success }
+      end
 
-    context 'if user signed out' do
-      it { should redirect_to sign_in_path }
+      context 'if user signed out' do
+        it { should redirect_to sign_in_path }
+      end
     end
-  end
 
 instead of
 
-  describe "GET index" do
-    context 'if user signed in' do
-      before { sign_in user }
-      before { get :index }
-      it { should respond_with :success }
-    end
+    describe "GET index" do
+      context 'if user signed in' do
+        before { sign_in user }
+        before { get :index }
+        it { should respond_with :success }
+      end
 
-    context 'if user signed out' do
-      before { get :index }
-      it { should redirect_to sign_in_path }
+      context 'if user signed out' do
+        before { get :index }
+        it { should redirect_to sign_in_path }
+      end
     end
-  end
 
 # Requirements
 
