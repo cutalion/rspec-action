@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/cutalion/rspec-action.png)](http://travis-ci.org/#!/cutalion/rspec-action)
+
 # rspec-action
 
 An extension to rspec, which provides an `action` command to rspec examples
