@@ -1,4 +1,5 @@
 [![Build Status](https://secure.travis-ci.org/cutalion/rspec-action.png)](http://travis-ci.org/#!/cutalion/rspec-action)
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/cutalion/rspec-action)
 
 # rspec-action
 
