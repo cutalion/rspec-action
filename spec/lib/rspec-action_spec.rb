@@ -32,7 +32,7 @@ describe RSpec::Core::Hooks do
         before { str << "4" }
         before { str << "5" }
 
-        specify { str.should == "123453" }
+        specify { str.should == "12453" }
       end
     end
   end
@@ -48,6 +48,30 @@ describe RSpec::Core::Hooks do
       before { str << "5" }
       before { str << "4" }
       specify { str.should == "543" }
+    end
+  end
+
+  describe "rewrite action" do
+    context "on the same level" do
+      before { str << "1" }
+      action { str << "3" }
+      action { str << "4" }
+      before { str << "2" }
+
+      specify { str.should == "124" }
+    end
+
+    context "on the deeper level" do
+      before { str << "1" }
+      action { str << "3" }
+      before { str << "2" }
+
+      specify { str.should == "123" }
+
+      context "second level" do
+        action { str << "4" }
+        specify { str.should == "124" }
+      end
     end
   end
 end

@@ -1,0 +1,8 @@
+#v0.0.1
+
+* Initial release, works with rspec 2.6
+
+
+#v1.0.0
+
+* rspec 2.11 support, tested with 2.0, 2.6, 2.11
