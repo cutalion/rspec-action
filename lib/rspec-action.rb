@@ -17,14 +17,14 @@ module RSpec
       end
 
       def remove_previous_action(&block)
-        ancestors.each do |ancestor|
-          ancestor.hooks[:before][:each].delete_if {|hook| hook.respond_to?(:action_hook?)}
+        parent_groups.each do |parent|
+          parent.hooks[:before][:each].delete_if {|hook| hook.respond_to?(:action_hook?)}
         end
       end
 
       def action_added?(&block)
-        ancestors_hooks = ancestors.reverse.map { |ancestor| ancestor.hooks[:before][:each] }.flatten
-        ancestors_hooks.map(&:to_proc).include? block
+        parent_groups_hooks = parent_groups.reverse.map { |parent| parent.hooks[:before][:each] }.flatten
+        parent_groups_hooks.map(&:to_proc).include? block
       end
     end
   end
