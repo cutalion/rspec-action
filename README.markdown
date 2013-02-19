@@ -15,33 +15,37 @@ Use rspec-action 1.0.0 for Rspec 2.11 or lower.
 
 I prefer to write
 
-    describe "GET index" do
-      action { get :index }
+```ruby
+describe "GET index" do
+  action { get :index }
 
-      context 'if user signed in' do
-        before { sign_in user }
-        it { should respond_with :success }
-      end
+  context 'if user signed in' do
+    before { sign_in user }
+    it { should respond_with :success }
+  end
 
-      context 'if user signed out' do
-        it { should redirect_to sign_in_path }
-      end
-    end
+  context 'if user signed out' do
+    it { should redirect_to sign_in_path }
+  end
+end
+```
 
 instead of
 
-    describe "GET index" do
-      context 'if user signed in' do
-        before { sign_in user }
-        before { get :index }
-        it { should respond_with :success }
-      end
+```ruby
+describe "GET index" do
+  context 'if user signed in' do
+    before { sign_in user }
+    before { get :index }
+    it { should respond_with :success }
+  end
 
-      context 'if user signed out' do
-        before { get :index }
-        it { should redirect_to sign_in_path }
-      end
-    end
+  context 'if user signed out' do
+    before { get :index }
+    it { should redirect_to sign_in_path }
+  end
+end
+```
 
 # Requirements
 
