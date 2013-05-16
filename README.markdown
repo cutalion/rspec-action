@@ -11,6 +11,10 @@ rspec-action is an extension to rspec2, which allows you to specify the last bef
 I named it `action`, because it's quite helpful for me in the controller specs.
 
 *IMPORTANT*  
+Use rspec-action 1.2.0 for Rspec 2.13
+
+Use rspec-action 1.1.0 for Rspec 2.12
+
 Use rspec-action 1.0.0 for Rspec 2.11 or lower.
 
 I prefer to write
