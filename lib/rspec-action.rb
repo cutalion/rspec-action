@@ -24,7 +24,7 @@ module RSpec
 
       def action_added?(&block)
         parent_groups_hooks = parent_groups.reverse.map { |parent| parent.hooks[:before][:each] }.flatten
-        parent_groups_hooks.map(&:to_proc).include? block
+        parent_groups_hooks.include? block
       end
     end
   end

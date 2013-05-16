@@ -1,12 +1,14 @@
-#v0.0.1
+#v1.2.0
+* rspec 2.13 support, drop support for rspec 2.12 or lower
 
-* Initial release, works with rspec 2.6
+
+#v1.1.0
+* rspec 2.12 support, drop support for rspec 2.11 or lower
 
 
 #v1.0.0
-
 * rspec 2.11 support, tested with 2.0, 2.6, 2.11
 
-#v1.1.0
 
-* rspec 2.12 support, drop support for rspec 2.11 or lower
+#v0.0.1
+* Initial release, works with rspec 2.6
